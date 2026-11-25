@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAWPWAT — The Amazing Warp Post Way at Tawpwat | Official Landing</title>
+  <meta name="description" content="TAWPWAT: Retro 3D Liminal Sci-Fi Puppy Rescue Adventure for Android. Play as Inspector Kira Uku on a 24h mission across a 360° rotating station and 17 worlds to rescue Domi, Leia, and Mora—100% offline." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="starfield-bg" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" data-preserve-lang>
+        <img src="assets/icon.png" alt="TAWPWAT Icon" />
+        <span>TAWPWAT</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#puppies" data-i18n="nav.puppies">3 Puppies</a>
+        <a href="#features" data-i18n="nav.features">Gameplay</a>
+        <a href="#demo" data-i18n="nav.demo">Warp Demo</a>
+        <a href="#worlds" data-i18n="nav.worlds">17 Worlds</a>
+        <a href="#legal" data-i18n="nav.legal">Legal</a>
+        <a href="https://play.google.com/store/apps/details?id=com.mwveliz.tawpwat" target="_blank" rel="noopener noreferrer" data-i18n="nav.play">Google Play</a>
+      </nav>
+
+      <div class="lang-controls" aria-label="Language Selector">
+        <button type="button" class="lang-pill" data-lang="en">EN</button>
+        <button type="button" class="lang-pill" data-lang="es">ES</button>
+        <button type="button" class="lang-pill" data-lang="ja">日本語</button>
+        <select id="lang-select" class="lang-select" aria-label="Select among 36 languages"></select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge" data-i18n="hero.badge">RETRO 3D LIMINAL SCI-FI PUPPY RESCUE</span>
+          <h1>TAWPWAT</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">The Amazing Warp Post Way at Tawpwat</p>
+          <p class="hero-desc" data-i18n="hero.desc">
+            Play as Inspector Kira Uku on a 24-hour mission aboard the rotating 360° Tawpwat Annular Space Station and across 17 interconnected worlds. Find and rescue 3 missing puppies — Domi, Leia, and Mora — by tuning Oniric Visions, solving 5 analog warp puzzles, collecting dropped toys, and triangulating them on the 8×8 Causal Chess Board before timeline coherence runs out.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.mwveliz.tawpwat" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.99 1.99 0 0 1-.61-1.435V3.249c0-.553.226-1.076.609-1.435zM14.853 13.061l2.845 2.845-10.97 6.265 8.125-9.11zm3.765-3.765l2.531 1.445c.72.411.72 1.447 0 1.858l-2.531 1.445-3.199-3.199 3.199-1.549zM6.728 1.829l10.97 6.265-2.845 2.845-8.125-9.11z"/></svg>
+              <span data-i18n="hero.ctaPlay">Get it on Google Play</span>
+            </a>
+            <a class="btn btn-secondary" href="#demo" data-i18n="hero.ctaDemo">Try Warp Simulator</a>
+          </div>
+
+          <div class="hero-meta">
+            <span data-i18n="hero.metaOffline">100% Offline • Zero Ads • 24h Rescue Mission</span>
+            <span data-i18n="hero.metaLangs">36 Web Languages • Android &amp; Godot 4.3</span>
+          </div>
+        </div>
+
+        <div class="hero-portal-card">
+          <div class="portal-ring">
+            <img src="assets/icon.png" alt="Inspector Kira Uku &amp; Tawpwat Puppy Rescue" />
+          </div>
+          <p class="portal-caption">ID: com.mwveliz.tawpwat • v1.0.2 • 🐾⚡🐕</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="puppies" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="puppies.heading">Find &amp; Rescue the 3 Missing Puppies</h2>
+          <p data-i18n="puppies.sub">Each puppy has a unique 3D procedural breed model, favorite toy clue, difficulty tier, and joins Kira's pack once rescued.</p>
+        </div>
+
+        <div class="puppies-grid">
+          <article class="card puppy-card">
+            <div class="puppy-header">
+              <span class="puppy-name">🐾 Domi</span>
+              <span class="puppy-tier easy">2.0s Pause</span>
+            </div>
+            <h3 data-i18n="pup.domi.tier">Level 1: Easy • Dachshund (Teckel)</h3>
+            <p data-i18n="pup.domi.desc">Chased the scent of tachyon biscuits through the warp ducts. Drops quantum crumbs and pauses often so Kira can catch up.</p>
+            <div class="puppy-stats" data-i18n="pup.domi.stats">Speed 5.5 • Clues 1 • Visions 1 • Sighting 100%</div>
+            <div class="puppy-toy" data-i18n="pup.domi.toy">Toy: Quantum Bone Biscuit</div>
+          </article>
+
+          <article class="card puppy-card">
+            <div class="puppy-header">
+              <span class="puppy-name">⚡ Leia</span>
+              <span class="puppy-tier medium">1.2s Pause</span>
+            </div>
+            <h3 data-i18n="pup.leia.tier">Level 2: Medium • Jack Russell Terrier</h3>
+            <p data-i18n="pup.leia.desc">Bounced after a glowing tennis ball into a hyperdimensional portal. Nimble, fast, and leaps swiftly across eras.</p>
+            <div class="puppy-stats" data-i18n="pup.leia.stats">Speed 7.5 • Clues 2 • Visions 2 • Sighting 50%</div>
+            <div class="puppy-toy" data-i18n="pup.leia.toy">Toy: Phosphorescent Tennis Ball</div>
+          </article>
+
+          <article class="card puppy-card">
+            <div class="puppy-header">
+              <span class="puppy-name">🐕 Mora</span>
+              <span class="puppy-tier hard">0.5s Pause</span>
+            </div>
+            <h3 data-i18n="pup.mora.tier">Level 3: Hard • Great Dane Puppy</h3>
+            <p data-i18n="pup.mora.desc">Giant yet shy puppy whose big paws trip over gravity anomalies, hiding in the deepest, farthest corners of hyperspace.</p>
+            <div class="puppy-stats" data-i18n="pup.mora.stats">Speed 10.0 • Clues 3 • Visions 3 • Sighting 30%</div>
+            <div class="puppy-toy" data-i18n="pup.mora.toy">Toy: Interstellar Rope Toy</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="features.heading">Core Gameplay Loop</h2>
+          <p data-i18n="features.sub">A non-violent, atmospheric 3D sci-fi adventure blending a 360° rotating space hub, tactile puzzles, and pack rescue.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <span class="card-icon">🛸</span>
+            <h3 data-i18n="feat1.title">360° Rotating Hub &amp; 17 Worlds</h3>
+            <p data-i18n="feat1.desc">Explore the 5-sector wrap-around Tawpwat Annular Space Station and 17 worlds (Exterior, District, and Sanctum Vault).</p>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">🔮</span>
+            <h3 data-i18n="feat2.title">Oniric Visions &amp; +5% Coherence</h3>
+            <p data-i18n="feat2.desc">Approach LED terminals and dream dioramas to restore Timeline Coherence and reveal which world your target puppy fled to.</p>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">🎛️</span>
+            <h3 data-i18n="feat3.title">5 Analog &amp; Sci-Fi Warp Puzzles</h3>
+            <p data-i18n="feat3.desc">Unlock portals with Quantum Gems or master the Oscilloscope, Cipher Disk, Astronomical Clock, Chrono Beam, and Hydro Manometer.</p>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">🦴</span>
+            <h3 data-i18n="feat4.title">Live Sightings &amp; Dropped Toys</h3>
+            <p data-i18n="feat4.desc">Catch a puppy during her playful pause for an early rescue—or collect her dropped favorite toy as a forensic clue.</p>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">♟️</span>
+            <h3 data-i18n="feat5.title">8×8 Causal Chess &amp; Pack Follow</h3>
+            <p data-i18n="feat5.desc">Collect enough clues to highlight the target world (🎯) on the A1–H8 board, rescue her in Zone 2, and reunite the full pack!</p>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">🛡️</span>
+            <h3 data-i18n="feat6.title">100% Offline &amp; Privacy-First</h3>
+            <p data-i18n="feat6.desc">Zero internet permissions, zero ads, local-only saves, plus built-in TTS voiceover and handheld haptic feedback.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="demo.heading">Interactive Warp Portal Simulator</h2>
+          <p data-i18n="demo.sub">Calibrate the Frequency Oscilloscope just like Kira does to unlock warp doors and lock onto a missing puppy's trail.</p>
+        </div>
+
+        <div class="demo-panel">
+          <div class="scope-screen">
+            <canvas id="oscilloscope-canvas" width="540" height="220"></canvas>
+            <div id="scope-status" class="scope-status" data-i18n="demo.locked">PORTAL LOCKED — TUNE RESONANCE</div>
+          </div>
+
+          <div class="scope-controls">
+            <div class="slider-group">
+              <label for="slider-freq">
+                <span data-i18n="demo.freqLabel">Carrier Frequency (Hz)</span>
+                <span id="val-freq">32 Hz</span>
+              </label>
+              <input id="slider-freq" type="range" min="10" max="100" value="32" />
+            </div>
+
+            <div class="slider-group">
+              <label for="slider-phase">
+                <span data-i18n="demo.phaseLabel">Tachyon Phase (°)</span>
+                <span id="val-phase">60°</span>
+              </label>
+              <input id="slider-phase" type="range" min="0" max="360" value="60" />
+            </div>
+
+            <div class="slider-group">
+              <label for="slider-amp">
+                <span data-i18n="demo.ampLabel">Harmonic Gain (%)</span>
+                <span id="val-amp">40%</span>
+              </label>
+              <input id="slider-amp" type="range" min="10" max="100" value="40" />
+            </div>
+
+            <p class="scope-hint" data-i18n="demo.hint">Target: Freq 64 Hz • Phase 180° • Gain 75%</p>
+            <button id="btn-scramble" type="button" class="btn btn-secondary" data-i18n="demo.reset">Scramble Frequency</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="worlds" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="worlds.heading">17 Interconnected Worlds</h2>
+          <p data-i18n="worlds.sub">Travel across ancient Earth, orbital archives, exoplanets, and the Sombrero Null Archive—each with 3 explorable 3D zones.</p>
+        </div>
+
+        <div class="worlds-grid">
+          <div class="world-chip"><span>Alexandria</span><span class="world-era">48 BC</span></div>
+          <div class="world-chip"><span>Babylon</span><span class="world-era">539 BC</span></div>
+          <div class="world-chip"><span>Kyoto</span><span class="world-era">1603</span></div>
+          <div class="world-chip"><span>Prague</span><span class="world-era">1610</span></div>
+          <div class="world-chip"><span>Paris</span><span class="world-era">1789</span></div>
+          <div class="world-chip"><span>London</span><span class="world-era">1888</span></div>
+          <div class="world-chip"><span>Vienna</span><span class="world-era">1913</span></div>
+          <div class="world-chip"><span>Santiago</span><span class="world-era">1985</span></div>
+          <div class="world-chip"><span>Lunar Craters</span><span class="world-era">2090</span></div>
+          <div class="world-chip"><span>Orbital Archive</span><span class="world-era">2140</span></div>
+          <div class="world-chip"><span>Europa Abyss</span><span class="world-era">2210</span></div>
+          <div class="world-chip"><span>Floating Venus</span><span class="world-era">2240</span></div>
+          <div class="world-chip"><span>Elysium Monolith</span><span class="world-era">2300</span></div>
+          <div class="world-chip"><span>Titan Methane Mines</span><span class="world-era">SECTOR-T</span></div>
+          <div class="world-chip"><span>Kepler-186f</span><span class="world-era">EXO-186</span></div>
+          <div class="world-chip"><span>Proxima b Outpost</span><span class="world-era">PROX-B</span></div>
+          <div class="world-chip"><span>Sombrero Null Archive</span><span class="world-era">H8 • NULL</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="legal" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="legal.heading">Google Play &amp; Legal Documentation</h2>
+          <p data-i18n="legal.sub">Transparent policies ready for Google Play Console compliance.</p>
+        </div>
+
+        <div class="legal-actions">
+          <a href="privacy.html" class="btn btn-secondary" data-preserve-lang data-i18n="legal.privacyBtn">Privacy Policy</a>
+          <a href="terms.html" class="btn btn-secondary" data-preserve-lang data-i18n="legal.termsBtn">Terms &amp; Conditions</a>
+          <a href="license.html" class="btn btn-secondary" data-preserve-lang data-i18n="legal.licenseBtn">License &amp; IP</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p data-i18n="footer.rights">© 2026 Miguel Delgado Veliz (com.mwveliz.tawpwat). All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://play.google.com/store/apps/details?id=com.mwveliz.tawpwat" target="_blank" rel="noopener noreferrer" data-i18n="footer.playLink">Google Play Store</a>
+        <a href="privacy.html" data-preserve-lang data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="terms.html" data-preserve-lang data-i18n="footer.terms">Terms &amp; Conditions</a>
+        <a href="license.html" data-preserve-lang data-i18n="footer.license">License</a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/app.js"></script>
+</body>
+</html>
